@@ -1,4 +1,5 @@
 import { Coordinate } from "ol/coordinate";
+import { LineShape, PolygonShape } from "../Shape/Abstractions";
 import { ShapeAssaultArrow } from "../Shape/Arrow/AssaultArrow";
 import { ShapeAssaultDirection } from "../Shape/Arrow/AssaultDirection";
 import { ShapeAttackArrow } from "../Shape/Arrow/AttachArrow";
@@ -38,7 +39,7 @@ import { ShapeSurface } from "../Shape/Polygon/Suface";
 import { ShaprTrapezoid } from "../Shape/Polygon/Trapezoid";
 import { ShapeType } from "./ShapeType";
 /** 图形生成器 */
-export function ShapeCreator(points: Coordinate[], type: ShapeType, size: number) {
+export function ShapeCreator(points: Coordinate[], type: ShapeType, size: number):PolygonShape|LineShape {
     switch (type) {
         case ShapeType.CardinalArrow: return new ShapeCardinalArrow(points);
         case ShapeType.LineArrow: return new ShapeLinetArrow(points);
@@ -77,5 +78,6 @@ export function ShapeCreator(points: Coordinate[], type: ShapeType, size: number
         case ShapeType.AssaultDirection: return new ShapeAssaultDirection(points);
         case ShapeType.DoubleArrow: return new ShapeDoubleArrow(points);
         case ShapeType.GatherPlace: return new ShapeGatherPlace(points);
+        default: return new ShapeLine(points);
     }
 }
