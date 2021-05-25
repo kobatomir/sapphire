@@ -1,0 +1,18 @@
+{
+  "name": "@violets/core",
+  "version": "1.0.0",
+  "description": "common uilt use ts",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "ushio",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
+}
