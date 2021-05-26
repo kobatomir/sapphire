@@ -1,6 +1,6 @@
 {
   "name": "@violets/shape",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "violet 图形计算基础",
   "main": "./dist/index.js",
   "scripts": {
