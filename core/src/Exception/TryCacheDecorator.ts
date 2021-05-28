@@ -38,3 +38,5 @@ function Log(this: any, e: any, target: any, propertyKey: any, param: any) {
 
 /** 捕获异常并在控制台输出 */
 export const Catched = Catch(true);
+/** Tryable= Catch */
+export const Tryable= Catch;
