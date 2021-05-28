@@ -11,7 +11,7 @@ export const ShapeNames:ShapeName[] = [
     { index: <number>ShapeType.Bezier , name: "二次贝塞尔" },
     { index: <number>ShapeType.BezierSegment , name: "二次贝塞尔线段" },
     { index: <number>ShapeType.BezierThree , name: "三次贝塞尔" },
-    { index: <number>ShapeType.BezierSegmentThree , name: "二次贝塞尔线段" },
+    { index: <number>ShapeType.BezierSegmentThree , name: "三次贝塞尔线段" },
     { index: <number>ShapeType.Cardinal , name: "卡迪尔曲线" },
     { index: <number>ShapeType.Line , name: "折线" },
     { index: <number>ShapeType.Circle , name: "圆" },
