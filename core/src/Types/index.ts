@@ -11,3 +11,5 @@ export type ActionT<T> = (t:T)=>void;
 
 /** Action<T> */
 export type FuncT<T,TOut> = (t:T)=>TOut;
+
+export type ErrorAction= (e: Error) => any;
