@@ -9,7 +9,7 @@ export class CancellationToken{
     }
 
     /** 取消事件订阅 */
-    CancelEvent:Action[]=[];
+    readonly CancelEvent:Action[]=[];
     
     /** 取消事件 */
     Cancel(){
