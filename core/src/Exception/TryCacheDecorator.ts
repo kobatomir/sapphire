@@ -2,13 +2,13 @@
  * 异常捕获装饰器
  * @param errorhandler 异常处理方法
  */
-export function Catch(errorhandler: Function): MethodDecorator;
+export function Tryable(errorhandler: Function): MethodDecorator;
 /**
  * 异常捕获装饰器
  * @param writeToConsole  是否记录错误到控制台
  */
-export function Catch(writeToConsole: boolean): MethodDecorator;
-export function Catch(param: any): MethodDecorator {
+export function Tryable(writeToConsole: boolean): MethodDecorator;
+export function Tryable(param: any): MethodDecorator {
     return function (target: Object, propertyKey: string | symbol, descriptor: TypedPropertyDescriptor<any>) {
         const originFunc: Function = descriptor.value;
         descriptor.value = function (...args: any[]) {
@@ -37,6 +37,4 @@ function Log(this: any, e: any, target: any, propertyKey: any, param: any) {
 }
 
 /** 捕获异常并在控制台输出 */
-export const Catched = Catch(true);
-/** Tryable= Catch */
-export const Tryable= Catch;
+export const Tryabled = Tryable(true);
