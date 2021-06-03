@@ -1,0 +1,22 @@
+{
+  "name": "@violets/draw",
+  "version": "1.0.1",
+  "description": "violet 图像最终用户操作",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "ushio",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/ol": "^6.5.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "ol": "^6.5.0",
+    "@violets/shape": "1.0.2"
+  }
+}
