@@ -1,6 +1,6 @@
 {
   "name": "@violets/draw",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "violet 图像最终用户操作",
   "main": "./dist/index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "ol": "^6.5.0",
-    "@violets/shape": "1.0.2"
+    "@violets/shape": "^1.0.2",
+    "@violets/core": "^1.0.2"
   }
 }
