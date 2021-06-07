@@ -4,6 +4,7 @@ import { Coordinate } from "ol/coordinate";
 import SourceVector from 'ol/source/Vector';
 import { EventRecord } from "../Abstract/EventRecord";
 import { PointLastEqual } from "../Abstract/PointFunc";
+import { ShapeFeature } from "../Abstract/ShapeFeature";
 
 
 /** 图形绘制 */
@@ -31,7 +32,7 @@ export class ShapeDrawer {
         this.record.Event["click"] = this.map.on('click', e => {
             this.Points.push(e.coordinate);
             let shape: LineShape | PolygonShape = ShapeCreator(this.Points, type, 5);
-            let feature = new Feature(shape);
+            let feature = new ShapeFeature(shape);
             this.featureSource.addFeature(feature);
             this.record.Event["dblclick"] = this.map.on('dblclick', () => this.Dispose());
             this.record.Event["pointermove"] = this.map.on("pointermove", e => this.MapPointerMove(e, shape));
