@@ -12,7 +12,6 @@ export function BannaMove(container: HTMLElement, div: HTMLElement, func: (left:
         if (func) func(left, top);
     }
     let mouseup = () => {
-        div.removeEventListener("mousedown", mousedown);
         document.removeEventListener("mousemove", mousemove);
         document.removeEventListener("mouseup", mouseup);
     }
