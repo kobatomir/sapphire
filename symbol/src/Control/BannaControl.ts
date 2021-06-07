@@ -60,3 +60,4 @@ export abstract class BannaControl {
             this._source.addFeature(this._line);
         }
     }
+}
