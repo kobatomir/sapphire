@@ -1,6 +1,6 @@
 {
   "name": "@violets/draw",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "violet 图像最终用户操作",
   "main": "./dist/index.js",
   "scripts": {

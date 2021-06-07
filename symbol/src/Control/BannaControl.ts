@@ -60,4 +60,9 @@ export abstract class BannaControl {
             this._source.addFeature(this._line);
         }
     }
+
+    Destory(){
+        this._map.removeOverlay(this.overlay);
+        this._source.removeFeature(this._line);
+    }
 }
