@@ -1,0 +1,40 @@
+@mixin transitionAll($time) {
+    transition: all $time;
+  }
+  
+
+.gloabl-menu {
+    position: absolute;
+    z-index: 99999999;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    @include transitionAll(0.2s);
+    border: 1px solid #1f9acd;
+    .menu-item {
+      width: 150px;
+      height: 36px;
+      box-sizing: border-box;
+      padding: 0 10px;
+      @include transitionAll(0.2s);
+      font-size: 12px;
+      &:hover {
+        color: white;
+        background-color: rgba(31, 153, 205, 0.8);
+        i {
+          color: white;
+        }
+      }
+      i {
+        color: #1f9acd;
+        @include transitionAll(0.2s);
+        margin-right: 10px;
+      }
+    }
+    &.show {
+      display: block;
+      animation: menushow ease-out forwards 0.2s;
+    }
+    &.hide {
+      display: none;
+    }
+  }
