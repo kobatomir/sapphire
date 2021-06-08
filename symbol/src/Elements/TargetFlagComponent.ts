@@ -62,7 +62,10 @@ export class TargetFlagComponent extends LitElement implements IBannaElement
         return html`
         <div class="target-box" data-color="${this.color}" style="transform:translateY(${-this.data.length*50 -50}px)">
              ${this.data.map(s=> html`
-                 <div class="target-item" @dblclick="${(e:MouseEvent)=>this.dblclickhand?.call(this,s)}"  @contextmenu="${(e:MouseEvent)=>this.contexthand?.call(this,s,e)}" style="border-color:${this.color}">
+                 <div class="target-item" @dblclick="${(e:MouseEvent)=>this.dblclickhand?.call(this,s)}"  @contextmenu="${(e:MouseEvent)=>{
+                     e.preventDefault();
+                     this.contexthand?.call(this,s,e);
+                    }}" style="border-color:${this.color}">
                  <div class="content flex flex-align-center" style="border-color:${this.color}">
                     ${s.name}
                  </div>

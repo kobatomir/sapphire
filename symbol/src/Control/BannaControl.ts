@@ -8,7 +8,7 @@ import { BannaMove } from "../Extension/BannaMove";
 import { PointEqual } from "../Extension/PointEqual";
 
 export abstract class BannaControl {
-    protected _coordinate: Coordinate;
+    public readonly _coordinate: Coordinate;
     protected abstract _component: HTMLElement;
     protected _source: VectorSource;
     protected _map: Map;
