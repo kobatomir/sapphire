@@ -2,7 +2,7 @@ import { Coordinate } from "ol/coordinate";
 import { Map } from "ol";
 import VectorSource from "ol/source/Vector";
 import { BannaControl } from "./BannaControl";
-import { IBannaElement } from "../Extension/IBannaElement";
+import { IBannaElement } from "../Abstract/IBannaElement";
 import { IBannaData } from "../Abstract/IBannaData";
 
 export class TargetFlagControl extends BannaControl {

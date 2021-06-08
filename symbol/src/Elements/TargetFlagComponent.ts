@@ -1,6 +1,6 @@
 import { css, customElement, html, LitElement, property } from "lit-element";
 import { IBannaData } from "../Abstract/IBannaData";
-import { IBannaElement } from "../Extension/IBannaElement";
+import { IBannaElement } from "../Abstract/IBannaElement";
 
 @customElement("target-flag")
 export class TargetFlagComponent extends LitElement implements IBannaElement
@@ -12,10 +12,10 @@ export class TargetFlagComponent extends LitElement implements IBannaElement
     color:string="#408aff";
 
     @property()
-    name:string="";
+    dblclickhand?:(data:IBannaData)=>void;
 
     @property()
-    dblclcik?:(data:IBannaData)=>void;
+    contexthand?:(data:IBannaData,e:MouseEvent)=>void;
 
     static shadowRootOptions: ShadowRootInit = {mode: 'closed'};
 
@@ -62,7 +62,7 @@ export class TargetFlagComponent extends LitElement implements IBannaElement
         return html`
         <div class="target-box" data-color="${this.color}" style="transform:translateY(${-this.data.length*50 -50}px)">
              ${this.data.map(s=> html`
-                 <div class="target-item" @dblclick="${(e:MouseEvent)=>this.dblclcik?.call(this,s)}" style="border-color:${this.color}">
+                 <div class="target-item" @dblclick="${(e:MouseEvent)=>this.dblclickhand?.call(this,s)}"  @contextmenu="${(e:MouseEvent)=>this.contexthand?.call(this,s,e)}" style="border-color:${this.color}">
                  <div class="content flex flex-align-center" style="border-color:${this.color}">
                     ${s.name}
                  </div>
